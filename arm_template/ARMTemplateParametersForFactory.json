@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "value": "covid-reporting-adf-86"
+        },
+        "ls_ablob_covidreportingsa_connectionString": {
+            "value": ""
+        },
+        "ls_adls_covidreportingdl_accountKey": {
+            "value": ""
+        },
+        "ls_sql_covid_db_password": {
+            "value": ""
+        },
+        "tr_ingest_population_data_properties_typeProperties_scope": {
+            "value": "/subscriptions/42ad6ef5-7aa8-44d6-8e44-762808d64c0d/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportingsa86"
+        },
+        "ls_adls_covidreportingdl_properties_typeProperties_url": {
+            "value": "https://covidreportingdl86.dfs.core.windows.net/"
+        },
+        "ls_http_opendata_ecdc_europe_eu_properties_typeProperties_url": {
+            "value": "@{linkedService().sourceBaseURL}"
+        },
+        "ls_sql_covid_db_properties_typeProperties_server": {
+            "value": "covid-srv86.database.windows.net"
+        },
+        "ls_sql_covid_db_properties_typeProperties_database": {
+            "value": "covid-db"
+        },
+        "ls_sql_covid_db_properties_typeProperties_userName": {
+            "value": "adm"
+        }
+    }
+}

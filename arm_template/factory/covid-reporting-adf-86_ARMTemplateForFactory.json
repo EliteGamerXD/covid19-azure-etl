@@ -1,0 +1,42 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "type": "string",
+            "metadata": "Data Factory name",
+            "defaultValue": "covid-reporting-adf-86"
+        },
+        "dataFactory_location": {
+            "type": "string",
+            "defaultValue": "uksouth"
+        },
+        "dataFactory_identity_type": {
+            "type": "string",
+            "defaultValue": "SystemAssigned"
+        }
+    },
+    "variables": {
+        "factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+    },
+    "resources": [
+        {
+            "name": "[parameters('factoryName')]",
+            "type": "Microsoft.DataFactory/factories",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "trustModeClaimForMi": {
+                    "value": "Enabled",
+                    "editable": true
+                }
+            },
+            "dependsOn": [],
+            "location": "[parameters('dataFactory_location')]",
+            "identity": {
+                "type": "[parameters('dataFactory_identity_type')]",
+                "principalId": "2a496918-2c06-41ba-a098-76e749736b3d",
+                "tenantId": "ef7a487a-77ca-410a-803d-e426b62a587f"
+            }
+        }
+    ]
+}
