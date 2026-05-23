@@ -12,8 +12,8 @@ An end-to-end data engineering pipeline built on Azure to ingest, transform, and
 ---
 
 ## Data Sources
-- **ECDC (European Centre for Disease Prevention and Control)** — COVID-19 case counts, hospital admissions, ICU occupancy, and testing data ingested via HTTP linked service
-- **Eurostat Population Data** — uploaded as flat files to Azure Blob Storage and used as lookup data for per-capita calculations
+- **ECDC (European Centre for Disease Prevention and Control)** - COVID-19 case counts, hospital admissions, ICU occupancy, and testing data ingested via HTTP linked service
+- **Eurostat Population Data** - uploaded as flat files to Azure Blob Storage and used as lookup data for per-capita calculations
 
 ---
 
@@ -25,11 +25,11 @@ An end-to-end data engineering pipeline built on Azure to ingest, transform, and
 - Raw files landed in Azure Data Lake Storage Gen2 (raw layer)
 
 ### 2. Transformation
-- **ADF Mapping Data Flows** — visual transformations including:
+- **ADF Mapping Data Flows** - visual transformations including:
   - Filter, Select, Pivot, Lookup, Conditional Split
   - Derived Column, Aggregate, Join
   - Used to clean and reshape cases, hospital admissions, and testing data
-- **Azure Databricks (PySpark)** — additional transformations on population 
+- **Azure Databricks (PySpark)** - additional transformations on population 
   data using PySpark notebooks
 - Processed data written to ADLS Gen2 (processed layer)
 
