@@ -50,7 +50,7 @@ An end-to-end data engineering pipeline built on Azure to ingest, transform, and
 | Azure Blob Storage | Source file storage |
 | Azure Databricks | PySpark-based transformation |
 | Azure SQL Database | Serving layer for reporting |
-| Azure DevOps | Source control and CI/CD pipeline integration |
+| Azure DevOps | Source control (observed; CI/CD not implemented) |
 | Power BI | Reporting and visualisation |
 
 ---
