@@ -7,7 +7,7 @@ An end-to-end data engineering pipeline built on Azure to ingest, transform, and
 
 ## Architecture
 
-![Architecture Diagram](screenshots/architecture.png)
+![Architecture Diagram](screenshot/architecture.png)
 
 ---
 
